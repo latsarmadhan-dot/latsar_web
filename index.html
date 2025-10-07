@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jelajahi Keindahan Barito Utara</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logo.png">
 </head>
 <body>
 
-  <!-- ================= Navbar ================= -->
+  <!-- =============== Navbar =============== -->
   <header class="navbar">
     <div class="container nav-content">
-      <img src="images/logo.png" alt="Logo Barito Utara">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo Barito Utara">
+        <span>Barito Utara</span>
+      </div>
       <nav>
-        <a href="#home">Beranda</a>
+        <a href="#home" class="active">Beranda</a>
         <a href="#destinasi">Destinasi</a>
         <a href="#panduan">Panduan</a>
         <a href="#galeri">Galeri</a>
@@ -22,125 +27,126 @@
     </div>
   </header>
 
-  <!-- ================= Hero Section ================= -->
+  <!-- =============== Hero Section =============== -->
   <section id="home" class="hero">
     <div class="hero-content container">
-        <div class="hero-text">
-            <h1>Jelajahi Keindahan Barito Utara</h1>
-            <p>Temukan pesona alam dan budaya melalui destinasi unggulan: Air Terjun Jantur Doyam, Dam Trinsing, dan Bumi Perkemahan Panglima Batur.</p>
-                <a href="#destinasi" class="btn-primary">Lihat Destinasi</a>
+      <div class="hero-text">
+        <h1>Jelajahi Keindahan <span>Barito Utara</span></h1>
+        <p>Temukan pesona alam dan budaya melalui destinasi unggulan: <strong>Air Terjun Jantur Doyam</strong>, <strong>Dam Trinsing</strong>, dan <strong>Bumi Perkemahan Panglima Batur</strong>.</p>
+        <a href="#destinasi" class="btn-primary">Lihat Destinasi</a>
+      </div>
+      <div class="hero-slider">
+        <div class="slides">
+          <img src="images/Air Terjun Jantur Doyam1.jpg" alt="Air Terjun Jantur Doyam" class="active">
+          <img src="images/BUMI PERKEMAHAN PANGLIMA BATUR 1.jpg" alt="Bumi Perkemahan Panglima Batur">
+          <img src="images/DAM Trinsing 1.jpg" alt="Dam Trinsing">
         </div>
-        <div class="hero-slider">
-            <div class="slides">
-                <img src="images/Air Terjun Jantur Doyam1.jpg" alt="Barito Utara 1" class="active">
-                <img src="images/BUMI PERKEMAHAN PANGLIMA BATUR 1.jpg" alt="Barito Utara 2">
-                <img src="images/DAM Trinsing 1.jpg" alt="Barito Utara 3">
-            </div>
-        </div>
+      </div>
     </div>
-   </section>
+  </section>
 
-  <!-- ================= Destinasi ================= -->
+  <!-- =============== Destinasi =============== -->
   <section id="destinasi" class="section container">
     <h2>Destinasi Unggulan</h2>
     <div class="destinasi-grid">
       <div class="card">
-        <img src="images/jantur.jpg" alt="Jantur Doyam">
+        <img src="images/jantur.jpg" alt="Air Terjun Jantur Doyam">
         <h3>Air Terjun Jantur Doyam</h3>
-        <p>Air terjun alami dengan suasana asri, udara sejuk, dan spot foto yang indah. Cocok untuk keluarga maupun pecinta fotografi.</p>
+        <p>Air terjun alami dengan suasana asri, udara sejuk, dan spot foto yang menawan. Cocok untuk keluarga maupun pecinta alam.</p>
         <div class="info"><span>±45 menit</span><span>Rp10.000</span></div>
       </div>
       <div class="card">
         <img src="images/trinsing.jpg" alt="Dam Trinsing">
         <h3>Dam Trinsing</h3>
-        <p>Bendungan yang menjadi wisata favorit dengan pemandangan air yang tenang, cocok untuk bersantai, memancing, dan menikmati matahari terbenam.</p>
+        <p>Bendungan dengan panorama air tenang dan langit senja yang indah. Tempat ideal untuk bersantai dan memancing.</p>
         <div class="info"><span>±25 menit</span><span>Rp5.000</span></div>
       </div>
       <div class="card">
-        <img src="images/perkemahan.jpg" alt="Perkemahan">
+        <img src="images/perkemahan.jpg" alt="Bumi Perkemahan Panglima Batur">
         <h3>Bumi Perkemahan Panglima Batur</h3>
-        <p>Lokasi strategis untuk berkemah, kegiatan komunitas, pertemuan, dan acara kebudayaan lokal.</p>
+        <p>Lokasi strategis untuk kegiatan berkemah, pertemuan komunitas, serta acara kebudayaan lokal Barito Utara.</p>
         <div class="info"><span>±30 menit</span><span>Rp15.000</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ================= Panduan ================= -->
+  <!-- =============== Panduan Wisata =============== -->
   <section id="panduan" class="section container">
     <h2>Panduan Wisata</h2>
-    <div class="panduan">
-      <div>
+    <div class="panduan-grid">
+      <div class="panduan-card">
         <h4>Transportasi</h4>
-        <p>Tersedia angkutan lokal atau kendaraan pribadi. Semua lokasi mudah diakses dari Muara Teweh.</p>
-        <h4>Fasilitas</h4>
+        <p>Dapat dijangkau menggunakan angkutan lokal, ojek wisata, atau kendaraan pribadi. Semua lokasi mudah diakses dari pusat kota Muara Teweh.</p>
+
+        <h4>Fasilitas Umum</h4>
         <ul>
-          <li>Area parkir</li>
-          <li>Gazebo</li>
-          <li>Spot foto</li>
-          <li>Warung lokal</li>
+          <li>Area parkir luas</li>
+          <li>Gazebo dan tempat duduk</li>
+          <li>Spot foto instagramable</li>
+          <li>Warung dan penjual lokal</li>
         </ul>
       </div>
-      <div>
+
+      <div class="panduan-card">
         <h4>Tips Berkunjung</h4>
         <ol>
           <li>Gunakan pakaian nyaman dan alas kaki anti selip.</li>
-          <li>Siapkan bekal makanan dan minuman.</li>
-          <li>Jaga kebersihan dan patuhi aturan pengelola.</li>
+          <li>Bawa bekal makanan & minuman secukupnya.</li>
+          <li>Jaga kebersihan dan patuhi aturan pengelola wisata.</li>
+          <li>Hindari berkunjung saat hujan deras demi keamanan.</li>
         </ol>
       </div>
     </div>
   </section>
 
-  <!-- ================= Galeri ================= -->
+  <!-- =============== Galeri =============== -->
   <section id="galeri" class="section container">
     <h2>Galeri Foto & Video</h2>
     <div class="galeri-grid">
-      <img src="images/jantur.jpg" alt="Air Terjun" onclick="openLightbox(this)">
+      <img src="images/jantur.jpg" alt="Air Terjun Jantur Doyam" onclick="openLightbox(this)">
       <img src="images/trinsing.jpg" alt="Dam Trinsing" onclick="openLightbox(this)">
-      <img src="images/perkemahan.jpg" alt="Perkemahan" onclick="openLightbox(this)">
+      <img src="images/perkemahan.jpg" alt="Bumi Perkemahan Panglima Batur" onclick="openLightbox(this)">
       <video src="images/vid_jantur.mp4" controls></video>
     </div>
   </section>
 
-  <!-- ================= Kontak ================= -->
+  <!-- =============== Kontak =============== -->
   <section id="kontak" class="section container">
-    <h2>Kontak</h2>
-    <div class="kontak">
-      <div>
+    <h2>Hubungi Kami</h2>
+    <div class="kontak-grid">
+      <div class="kontak-info">
         <h4>Dinas Pariwisata Barito Utara</h4>
-        <p>Alamat: Muara Teweh, Kabupaten Barito Utara, Kalimantan Tengah</p>
-        <p>Email: info@baritoutara.go.id</p>
-        <p>Telp: (0526) xxxx xxx</p>
+        <p><strong>Alamat:</strong> Muara Teweh, Kabupaten Barito Utara, Kalimantan Tengah</p>
+        <p><strong>Email:</strong> info@baritoutara.go.id</p>
+        <p><strong>Telepon:</strong> (0526) xxxx xxx</p>
       </div>
-      <form id="contactForm">
-        <input type="text" placeholder="Nama" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Pesan" required></textarea>
-        <button type="submit" class="btn-primary">Kirim</button>
+
+      <form id="contactForm" class="contact-form">
+        <input type="text" placeholder="Nama Lengkap" required>
+        <input type="email" placeholder="Alamat Email" required>
+        <textarea placeholder="Pesan Anda..." rows="5" required></textarea>
+        <button type="submit" class="btn-primary">Kirim Pesan</button>
       </form>
     </div>
   </section>
 
-  <!-- ================= Statistik Pengunjung ================= -->
+  <!-- =============== Statistik Pengunjung =============== -->
   <section class="section container text-center">
     <div class="visitor-box">
-      <p>Kunjungan halaman (browser ini): <span id="visitorCount">0</span></p>
+      <p>Kunjungan halaman (browser ini): <span id="visitorCount">0</span> kali</p>
     </div>
   </section>
 
-  <!-- ================= Footer ================= -->
+  <!-- =============== Footer =============== -->
   <footer class="footer">
-    <p>© <span id="year"></span> Dinas Pariwisata Barito Utara. Semua Hak Dilindungi.</p>
+    <p>© <span id="year"></span> Dinas Pariwisata Barito Utara — Semua Hak Dilindungi.</p>
   </footer>
 
   <!-- Lightbox -->
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightboxImg" src="" alt="preview">
+    <img id="lightboxImg" src="" alt="Preview">
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
