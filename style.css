@@ -37,20 +37,18 @@ body {
    NAVBAR
 ======================= */
 .navbar {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 100;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow);
+  z-index: 1000;
 }
 
 .nav-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 0;
-  position: relative;
+  padding: 10px 0;
 }
 
 .logo {
@@ -61,7 +59,7 @@ body {
 
 .logo img {
   width: 45px;
-  height: 45px;
+  height: auto;
 }
 
 .logo span {
@@ -71,7 +69,6 @@ body {
 }
 
 nav a {
-  margin: 0 10px;
   text-decoration: none;
   color: var(--text-dark);
   font-weight: 500;
@@ -463,9 +460,9 @@ nav a.active {
 }
 
 .menu-toggle span {
-  width: 26px;
+  width: 28px;
   height: 3px;
-  background: var(--text-dark);
+  background: #333;
   border-radius: 3px;
   transition: 0.3s;
 }
@@ -481,13 +478,11 @@ nav a.active {
     flex-direction: column;
     position: absolute;
     top: 65px;
-    right: 0;
+    right: 10px;
     background: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-radius: 10px;
     padding: 15px;
-    width: 200px;
-    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
   }
 
   nav.active {
