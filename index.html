@@ -6,6 +6,7 @@
   <title>Jelajahi Keindahan Barito Utara</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -30,12 +31,12 @@
   <!-- =============== Hero Section =============== -->
   <section id="home" class="hero">
     <div class="hero-content container">
-      <div class="hero-text">
+      <div class="hero-text" data-aos="fade-right">
         <h1>Jelajahi Keindahan <span>Barito Utara</span></h1>
         <p>Temukan pesona alam dan budaya melalui destinasi unggulan: <strong>Air Terjun Jantur Doyam</strong>, <strong>Dam Trinsing</strong>, dan <strong>Bumi Perkemahan Panglima Batur</strong>.</p>
-        <a href="#destinasi" class="btn-primary">Lihat Destinasi</a>
+        <a href="#destinasi" class="btn-primary" data-aos="zoom-in" data-aos-delay="300">Lihat Destinasi</a>
       </div>
-      <div class="hero-slider">
+      <div class="hero-slider" data-aos="fade-left">
         <div class="slides">
           <img src="images/Air Terjun Jantur Doyam1.jpg" alt="Air Terjun Jantur Doyam" class="active">
           <img src="images/BUMI PERKEMAHAN PANGLIMA BATUR 1.jpg" alt="Bumi Perkemahan Panglima Batur">
@@ -47,21 +48,21 @@
 
   <!-- =============== Destinasi =============== -->
   <section id="destinasi" class="section container">
-    <h2>Destinasi Unggulan</h2>
+    <h2 data-aos="fade-up">Destinasi Unggulan</h2>
     <div class="destinasi-grid">
-      <div class="card">
+      <div class="card" data-aos="zoom-in">
         <img src="images/jantur.jpg" alt="Air Terjun Jantur Doyam">
         <h3>Air Terjun Jantur Doyam</h3>
         <p>Air terjun alami dengan suasana asri, udara sejuk, dan spot foto yang menawan. Cocok untuk keluarga maupun pecinta alam.</p>
         <div class="info"><span>±45 menit</span><span>Rp10.000</span></div>
       </div>
-      <div class="card">
+      <div class="card" data-aos="zoom-in" data-aos-delay="200">
         <img src="images/trinsing.jpg" alt="Dam Trinsing">
         <h3>Dam Trinsing</h3>
         <p>Bendungan dengan panorama air tenang dan langit senja yang indah. Tempat ideal untuk bersantai dan memancing.</p>
         <div class="info"><span>±25 menit</span><span>Rp5.000</span></div>
       </div>
-      <div class="card">
+      <div class="card" data-aos="zoom-in" data-aos-delay="400">
         <img src="images/perkemahan.jpg" alt="Bumi Perkemahan Panglima Batur">
         <h3>Bumi Perkemahan Panglima Batur</h3>
         <p>Lokasi strategis untuk kegiatan berkemah, pertemuan komunitas, serta acara kebudayaan lokal Barito Utara.</p>
@@ -72,9 +73,9 @@
 
   <!-- =============== Panduan Wisata =============== -->
   <section id="panduan" class="section container">
-    <h2>Panduan Wisata</h2>
+    <h2 data-aos="fade-up">Panduan Wisata</h2>
     <div class="panduan-grid">
-      <div class="panduan-card">
+      <div class="panduan-card" data-aos="fade-right">
         <h4>Transportasi</h4>
         <p>Dapat dijangkau menggunakan angkutan lokal, ojek wisata, atau kendaraan pribadi. Semua lokasi mudah diakses dari pusat kota Muara Teweh.</p>
 
@@ -87,7 +88,7 @@
         </ul>
       </div>
 
-      <div class="panduan-card">
+      <div class="panduan-card" data-aos="fade-left">
         <h4>Tips Berkunjung</h4>
         <ol>
           <li>Gunakan pakaian nyaman dan alas kaki anti selip.</li>
@@ -103,10 +104,10 @@
   <section id="galeri" class="section container">
     <h2>Galeri Foto & Video</h2>
     <div class="galeri-grid">
-      <img src="images/jantur.jpg" alt="Air Terjun Jantur Doyam" onclick="openLightbox(this)">
-      <img src="images/trinsing.jpg" alt="Dam Trinsing" onclick="openLightbox(this)">
-      <img src="images/perkemahan.jpg" alt="Bumi Perkemahan Panglima Batur" onclick="openLightbox(this)">
-      <video src="images/vid_jantur.mp4" controls></video>
+      <img src="images/Air Terjun Jantur Doyam1.jpg" alt="Air Terjun Jantur Doyam" onclick="openLightbox(this)" data-aos="flip-left">
+      <img src="images/trinsing.jpg" alt="Dam Trinsing" onclick="openLightbox(this)" data-aos="flip-left" data-aos-delay="200">
+      <img src="images/perkemahan.jpg" alt="Bumi Perkemahan Panglima Batur" onclick="openLightbox(this)" data-aos="flip-left" data-aos-delay="400">
+      <video src="images/vid_jantur.mp4" controls data-aos="zoom-in-up"></video>
     </div>
   </section>
 
@@ -121,7 +122,7 @@
         <p><strong>Telepon:</strong> (0526) xxxx xxx</p>
       </div>
 
-      <form id="contactForm" class="contact-form">
+      <form id="contactForm" class="contact-form" data-aos="fade-up">
         <input type="text" placeholder="Nama Lengkap" required>
         <input type="email" placeholder="Alamat Email" required>
         <textarea placeholder="Pesan Anda..." rows="5" required></textarea>
@@ -146,7 +147,7 @@
   <div id="lightbox" class="lightbox" onclick="closeLightbox()">
     <img id="lightboxImg" src="" alt="Preview">
   </div>
-
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

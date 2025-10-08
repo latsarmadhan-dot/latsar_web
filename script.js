@@ -1,44 +1,49 @@
-/* ========================= script.js ========================= */
+// ================= HERO SLIDER =================
+let slideIndex = 0;
+const slides = document.querySelectorAll('.hero-slider img');
 
-// Slide otomatis hero section
-let currentSlide = 0;
-const slides = document.querySelectorAll('.hero-slider .slides img');
-function showSlide(index){
-slides.forEach((img,i)=> img.classList.toggle('active', i === index));
-}
-function nextSlide(){
-currentSlide = (currentSlide + 1) % slides.length;
-showSlide(currentSlide);
-}
-if(slides.length > 0){
-showSlide(0);
-setInterval(nextSlide, 4000);
+function showSlides() {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === slideIndex) slide.classList.add('active');
+  });
+  slideIndex = (slideIndex + 1) % slides.length;
 }
 
-// Statistik pengunjung (localStorage)
-const key = 'visitor_count'
-let count = parseInt(localStorage.getItem(key) || '0', 10) + 1
-localStorage.setItem(key, count)
-document.getElementById('visitorCount').innerText = count
+setInterval(showSlides, 4000); // Ganti gambar tiap 4 detik
 
-// Tahun footer
-document.getElementById('year').textContent = new Date().getFullYear()
+// ================= FOOTER YEAR =================
+document.getElementById('year').textContent = new Date().getFullYear();
 
-// Lightbox
-function openLightbox(el){
-  const lightbox = document.getElementById('lightbox')
-  const img = document.getElementById('lightboxImg')
-  img.src = el.src
-  lightbox.style.display = 'flex'
+// ================= VISITOR COUNTER =================
+let count = localStorage.getItem('visitCount');
+if (!count) count = 0;
+count++;
+localStorage.setItem('visitCount', count);
+document.getElementById('visitorCount').textContent = count;
+
+// ================= LIGHTBOX =================
+function openLightbox(img) {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  lightbox.style.display = 'flex';
+  lightboxImg.src = img.src;
 }
-function closeLightbox(){
-  document.getElementById('lightbox').style.display = 'none'
+
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
 }
 
-// Form kontak
-const form = document.getElementById('contactForm')
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  alert('Pesan Anda telah terkirim! (simulasi)')
-  form.reset()
-})
+// ================= FORM HANDLER =================
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Terima kasih! Pesan Anda telah terkirim.');
+  e.target.reset();
+});
+
+// ================= INIT AOS =================
+AOS.init({
+  duration: 1200,      // durasi animasi (ms)
+  once: true,          // animasi hanya sekali
+  easing: 'ease-in-out'
+});
