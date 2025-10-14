@@ -88,7 +88,7 @@ nav a.active {
   align-items: center;
   justify-content: center;
   min-height: 85vh;
-  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+  background: linear-gradient(rgba(108, 253, 135, 0.45), rgba(0,0,0,0.45)),
               url('images/bg-barito.jpg') center/cover no-repeat;
   color: var(--text-light);
   position: relative;
