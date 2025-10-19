@@ -34,12 +34,6 @@ function closeLightbox() {
   document.getElementById('lightbox').style.display = 'none';
 }
 
-// ================= FORM HANDLER =================
-document.getElementById('contactForm').addEventListener('submit', (e) => {
-  e.preventDefault();
-  alert('Terima kasih! Pesan Anda telah terkirim.');
-  e.target.reset();
-});
 
 // ================= INIT AOS =================
 AOS.init({
@@ -73,3 +67,11 @@ backToTopBtn.addEventListener("click", () => {
     menuToggle.classList.toggle('active');
     navMenu.classList.toggle('active');
   });
+
+  // ================= POPUP FORM GOOGLE =================
+function openForm() {
+  document.getElementById("popupForm").style.display = "flex";
+}
+function closeForm() {
+  document.getElementById("popupForm").style.display = "none";
+}

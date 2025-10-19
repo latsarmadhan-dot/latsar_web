@@ -505,3 +505,61 @@ nav a.active {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* =======================
+   GOOGLE FORM POPUP
+======================= */
+.btn-form {
+  background-color: var(--primary);
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.btn-form:hover {
+  background-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  width: 90%;
+  max-width: 700px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  position: relative;
+  animation: popupShow 0.4s ease;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  color: #555;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #e74c3c;
+}
+
+@keyframes popupShow {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
