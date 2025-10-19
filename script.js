@@ -16,11 +16,18 @@ setInterval(showSlides, 4000); // Ganti gambar tiap 4 detik
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // ================= VISITOR COUNTER =================
-let count = localStorage.getItem('visitCount');
-if (!count) count = 0;
-count++;
-localStorage.setItem('visitCount', count);
-document.getElementById('visitorCount').textContent = count;
+async function updateVisitorCount() {
+  try {
+    const response = await fetch('/api/visitor');
+    const data = await response.json();
+    document.getElementById('visitorCount').textContent = data.count.toLocaleString();
+  } catch (error) {
+    console.error('Gagal mengambil data pengunjung:', error);
+    document.getElementById('visitorCount').textContent = '—';
+  }
+}
+
+updateVisitorCount();
 
 // ================= LIGHTBOX =================
 function openLightbox(img) {
