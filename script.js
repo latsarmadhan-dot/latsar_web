@@ -15,19 +15,20 @@ setInterval(showSlides, 4000); // Ganti gambar tiap 4 detik
 // ================= FOOTER YEAR =================
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// ================= VISITOR COUNTER =================
+// ================= VISITOR COUNTER (Realtime Global - Vercel KV) =================
 async function updateVisitorCount() {
   try {
     const response = await fetch('/api/visitor');
     const data = await response.json();
     document.getElementById('visitorCount').textContent = data.count.toLocaleString();
   } catch (error) {
-    console.error('Gagal mengambil data pengunjung:', error);
+    console.error('Gagal memuat jumlah pengunjung:', error);
     document.getElementById('visitorCount').textContent = '—';
   }
 }
 
 updateVisitorCount();
+
 
 // ================= LIGHTBOX =================
 function openLightbox(img) {
