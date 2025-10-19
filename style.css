@@ -563,3 +563,48 @@ nav a.active {
   from { opacity: 0; transform: scale(0.8); }
   to { opacity: 1; transform: scale(1); }
 }
+
+/* =======================
+   STATISTIK PENGUNJUNG
+======================= */
+.visitor-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: linear-gradient(135deg, #2c7a7b, #00796b);
+  color: #fff;
+  padding: 1.5rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.visitor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.visitor-icon img {
+  width: 60px;
+  height: 60px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.visitor-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.visitor-info p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Efek ikon berdenyut */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.15); opacity: 0.9; }
+}
