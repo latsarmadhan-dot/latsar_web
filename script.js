@@ -100,6 +100,17 @@ backToTopBtn.addEventListener("click", () => {
     navMenu.classList.toggle('active');
   });
 
+  // ================= TUTUP MENU OTOMATIS SAAT KLIK LINK =================
+const navLinksClick = document.querySelectorAll('#navMenu a');
+
+navLinksClick.forEach(link => {
+  link.addEventListener('click', () => {
+    // Tutup menu saat link diklik (berlaku di HP & laptop)
+    navMenu.classList.remove('active');
+    menuToggle.classList.remove('active');
+  });
+});
+
   // ================= POPUP FORM GOOGLE =================
 function openForm() {
   document.getElementById("popupForm").style.display = "flex";
