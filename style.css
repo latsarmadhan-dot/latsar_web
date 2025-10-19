@@ -491,23 +491,45 @@ nav a.active {
   }
 
   nav {
-    display: none;
+    display: flex;
     flex-direction: column;
     position: absolute;
-    top: 65px;
-    right: 10px;
-    background: #fff;
-    padding: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    transition: all 0.3s ease;
+    top: 70px;
+    right: 15px;
+    width: 85%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: all 0.4s ease;
   }
 
   nav.active {
-    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
   }
 
-  /* Animasi ikon jadi tanda X */
+  nav a {
+    font-size: 1.1rem;
+    padding: 12px 0;
+    text-align: center;
+    width: 100%;
+    color: var(--primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: var(--primary);
+    color: #fff;
+  }
+
+  /* Tombol hamburger animasi */
   .menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translateY(8px);
   }
