@@ -830,3 +830,6 @@ nav a.active {
   text-align: center;
   line-height: 34px;
 }
+.map-close:hover {
+  background: #92400e;
+}

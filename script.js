@@ -128,21 +128,21 @@ function openMap(place) {
   switch (place) {
     case "jantur":
       url =
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3991.26688545691!2d115.00148217482043!3d-2.026748997818331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df52dbf7a6f61a3%3A0x8858b7b016de6b59!2sAir%20Terjun%20Jantur%20Doyam!5e0!3m2!1sid!2sid!4v1697460000000!5m2!1sid!2sid";
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4363.3890813278!2d114.8468577!3d-0.8451204000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df975946a693a09%3A0x78b5b5cc8912f610!2sAir%20Terjun%20Jantur%20Doyam!5e1!3m2!1sid!2sid!4v1761014767489!5m2!1sid!2sid";
       break;
     case "trinsing":
       url =
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.3083060302974!2d115.0184811748278!3d-2.0297809978083306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df52dbf7a6f61a3%3A0x1234567890abcdef!2sDam%20Trinsing!5e0!3m2!1sid!2sid!4v1697460000001!5m2!1sid!2sid";
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4363.138263710708!2d114.93417679999999!3d-1.0448020000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df9813cce5d9443%3A0xc57c8b217ba79195!2sObyek%20Wisata%20Danau%20Desa%20Trinsing!5e1!3m2!1sid!2sid!4v1761014894061!5m2!1sid!2sid"
       break;
     case "batur":
       url =
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.3183060302974!2d115.0254811748278!3d-2.0317809978083306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df52dbf7a6f61a3%3A0xabcdef1234567890!2sBumi%20Perkemahan%20Panglima%20Batur!5e0!3m2!1sid!2sid!4v1697460000002!5m2!1sid!2sid";
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4363.163828970379!2d114.89503959999999!3d-1.0262286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df978a955555553%3A0x7a2177b2c5a04c6d!2sBuper%20Panglima%20Batur!5e1!3m2!1sid!2sid!4v1761014925784!5m2!1sid!2sid"
       break;
   }
 
   frame.src = url;
   modal.style.display = "flex";
-  document.body.classList.add("overflow-hidden"); // kunci body saat modal tampil
+  document.body.classList.add("overflow-hidden");
 }
 
 function closeMap() {
@@ -152,3 +152,12 @@ function closeMap() {
   frame.src = "";
   document.body.classList.remove("overflow-hidden");
 }
+
+// ✅ Tambahan ini biar bisa klik area luar popup untuk menutup
+document.addEventListener("click", function (e) {
+  const modal = document.getElementById("mapModal");
+  if (modal.style.display === "flex" && e.target === modal) {
+    closeMap();
+  }
+});
+
