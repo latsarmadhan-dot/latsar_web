@@ -141,22 +141,22 @@ function openMap(place) {
   }
 
   frame.src = url;
-  modal.classList.add("show");
+  modal.style.display = "flex";
   document.body.classList.add("overflow-hidden");
 }
 
 function closeMap() {
   const modal = document.getElementById("mapModal");
   const frame = document.getElementById("mapFrame");
-  modal.classList.remove("show");
+  modal.style.display = "none";
   frame.src = "";
   document.body.classList.remove("overflow-hidden");
 }
 
-// Klik area luar popup untuk menutup
+// ✅ Tambahan ini biar bisa klik area luar popup untuk menutup
 document.addEventListener("click", function (e) {
   const modal = document.getElementById("mapModal");
-  if (modal.classList.contains("show") && e.target === modal) {
+  if (modal.style.display === "flex" && e.target === modal) {
     closeMap();
   }
 });

@@ -833,31 +833,3 @@ nav a.active {
 .map-close:hover {
   background: #92400e;
 }
-
-/* Responsif untuk mobile */
-@media (max-width: 640px) {
-  .btn-maps {
-    width: 100%;
-    font-size: 14px;
-    padding: 10px;
-  }
-
-  .map-content {
-    width: 95%;
-    max-width: 100%;
-    border-radius: 8px;
-  }
-
-  .map-content iframe {
-    height: 280px; /* biar pas di layar HP */
-  }
-
-  .map-close {
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    line-height: 30px;
-    top: 6px;
-    right: 8px;
-  }
-}

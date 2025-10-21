@@ -56,61 +56,38 @@
   </section>
 
   <!-- =============== Destinasi =============== -->
-  <section id="destinasi" class="section container py-12 px-4">
-  <h2 class="text-3xl font-bold text-emerald-800 text-center mb-8" data-aos="fade-up">
-    Destinasi Unggulan
-  </h2>
+  <section id="destinasi" class="section container">
+  <h2 data-aos="fade-up">Destinasi Unggulan</h2>
+  <div class="destinasi-grid">
 
-  <div class="destinasi-grid grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
     <!-- CARD 1 -->
-    <div class="card bg-amber-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden" data-aos="zoom-in">
-      <img src="images/Air Terjun Jantur Doyam 3.jpeg" alt="Air Terjun Jantur Doyam" class="w-full h-48 object-cover">
-      <div class="p-4 flex flex-col">
-        <h3 class="text-lg font-semibold text-amber-800 mb-2">Air Terjun Jantur Doyam</h3>
-        <p class="text-sm text-slate-700 flex-grow">
-          Air terjun alami dengan suasana asri dan udara sejuk, cocok untuk keluarga dan pecinta alam.
-        </p>
-        <div class="info text-sm text-emerald-700 mt-2">±18 km / 30 menit</div>
-        <button class="btn-maps mt-4" onclick="openMap('jantur')">📍 Lihat di Maps</button>
-      </div>
+    <div class="card" data-aos="zoom-in">
+      <img src="images/Air Terjun Jantur Doyam 3.jpeg" alt="Air Terjun Jantur Doyam">
+      <h3>Air Terjun Jantur Doyam</h3>
+      <p>Air terjun alami dengan suasana asri, udara sejuk, dan spot foto yang menawan. Cocok untuk keluarga maupun pecinta alam.</p>
+      <div class="info"><span>±18 km/ 30 menit</span> <button class="btn-maps" onclick="openMap('jantur')">📍 Lihat di Maps</button></div>
+      
     </div>
 
     <!-- CARD 2 -->
-    <div class="card bg-amber-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden" data-aos="zoom-in" data-aos-delay="150">
-      <img src="images/DAM Trinsing10.jpeg" alt="Dam Trinsing" class="w-full h-48 object-cover">
-      <div class="p-4 flex flex-col">
-        <h3 class="text-lg font-semibold text-amber-800 mb-2">Dam Trinsing</h3>
-        <p class="text-sm text-slate-700 flex-grow">
-          Bendungan dengan panorama air tenang dan langit senja yang indah. Tempat ideal untuk bersantai.
-        </p>
-        <div class="info text-sm text-emerald-700 mt-2">±45 km / 50 menit</div>
-        <button class="btn-maps mt-4" onclick="openMap('trinsing')">📍 Lihat di Maps</button>
-      </div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="images/DAM Trinsing10.jpeg" alt="Dam Trinsing">
+      <h3>Dam Trinsing</h3>
+      <p>Bendungan dengan panorama air tenang dan langit senja yang indah. Tempat ideal untuk bersantai dan memancing.</p>
+      <div class="info"><span>±45 km / 50 menit</span> <button class="btn-maps" onclick="openMap('trinsing')">📍 Lihat di Maps</button></div>
+      
     </div>
 
     <!-- CARD 3 -->
-    <div class="card bg-amber-50 rounded-xl shadow hover:shadow-lg transition overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
-      <img src="images/BUMI PERKEMAHAN PANGLIMA BATUR3.jpeg" alt="Bumi Perkemahan Panglima Batur" class="w-full h-48 object-cover">
-      <div class="p-4 flex flex-col">
-        <h3 class="text-lg font-semibold text-amber-800 mb-2">Bumi Perkemahan Panglima Batur</h3>
-        <p class="text-sm text-slate-700 flex-grow">
-          Lokasi strategis untuk berkemah, pertemuan komunitas, dan kegiatan kebudayaan lokal Barito Timur.
-        </p>
-        <div class="info text-sm text-emerald-700 mt-2">±14 km / 20 menit</div>
-        <button class="btn-maps mt-4" onclick="openMap('batur')">📍 Lihat di Maps</button>
-      </div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="400">
+      <img src="images/BUMI PERKEMAHAN PANGLIMA BATUR3.jpeg" alt="Bumi Perkemahan Panglima Batur">
+      <h3>Bumi Perkemahan Panglima Batur</h3>
+      <p>Lokasi strategis untuk kegiatan berkemah, pertemuan komunitas, serta acara kebudayaan lokal Barito Timur.</p>
+      <div class="info"><span>±14 km/ 20 menit</span> <button class="btn-maps" onclick="openMap('batur')">📍 Lihat di Maps</button></div>
+      
     </div>
+
   </div>
-
-  <!-- 🌍 POPUP MAP MODAL -->
-    <div id="mapModal" class="map-modal fixed inset-0 bg-black/70 hidden justify-center items-center z-50 p-4">
-      <div class="map-content relative bg-white rounded-xl overflow-hidden w-full max-w-lg shadow-xl">
-        <span class="map-close absolute top-2 right-3 text-3xl font-bold text-white bg-emerald-800 rounded-full w-9 h-9 text-center leading-9 cursor-pointer" onclick="closeMap()">&times;</span>
-        <iframe id="mapFrame" src="" allowfullscreen loading="lazy" class="w-full h-[300px] sm:h-[400px]"></iframe>
-      </div>
-    </div>
-  </section>
-
 
   <!-- 🌍 POPUP MAP MODAL -->
     <div id="mapModal" class="map-modal">
